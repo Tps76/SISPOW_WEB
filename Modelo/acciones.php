@@ -6,4 +6,5 @@ class acciones{
 $acciones = new acciones();
 //$acciones->function;
 $hola=0;
+dqwdwqdqw
 ?>
