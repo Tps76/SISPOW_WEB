@@ -19,4 +19,5 @@ public static function credencial(){
 }
 $conexion = new connection; 
 $conexion -> credencial();
+
 ?>
