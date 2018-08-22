@@ -1,5 +1,6 @@
 <?php
 class conexion{
+	
 public static function credencial(){
 	$hostname="localhost";
         $database="SISPOW";
