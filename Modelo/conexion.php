@@ -1,7 +1,4 @@
 <?php
-
- 
-
 class conexion{
 public static function credencial(){
 	$hostname="localhost";
@@ -19,11 +16,6 @@ public static function credencial(){
         return $conex;
 }
 }
-
 $conexion = new connection; 
-
 $conexion -> credencial();
-
-
-
 ?>
