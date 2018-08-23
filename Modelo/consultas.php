@@ -16,7 +16,5 @@ class consultas{//clase consultas
     }
     }
 }
-//change
 //este archivo contiene consultas generalizadas donde le enviaremos un string con la consulta y nos devolvera el resultado.
-//cambio 2 
 ?>
