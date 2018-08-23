@@ -16,5 +16,6 @@ class consultas{//clase consultas
     }
     }
 }
+//cambio
 //este archivo contiene consultas generalizadas donde le enviaremos un string con la consulta y nos devolvera el resultado.
 ?>
