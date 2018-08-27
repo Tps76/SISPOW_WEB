@@ -13,7 +13,7 @@ class consultas{//clase consultas
         while($datos_while=mysqli_fetch_array($resultado)){//mientras recupera datos de la consulta, guardarlos en la variable datos_while
             return $datos_while;//retorne datos_while
         }
-    }
+    } 
     }
 }
 //este archivo contiene consultas generalizadas donde le enviaremos un string con la consulta y nos devolvera el resultado.

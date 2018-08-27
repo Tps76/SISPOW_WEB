@@ -7,5 +7,5 @@ class acciones{//clase acciones
     }
 }
 $acciones = new acciones();//llamada a clase acciones instanciandola
-$acciones->prueba;//llamada a la funcion prueba
+$acciones->prueba();//llamada a la funcion prueba
 ?>
