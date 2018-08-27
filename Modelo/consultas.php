@@ -1,20 +1,55 @@
 <?php
-require_once("conexion.php");//requiere conexion.php
-class consultas{//clase consultas
-    public function ejemplo($consulta){//funcion ejemplo que recibe una consulta
-    $conexion=conexion::credencial();//llamamos la clase conexion y ejecutamos la funcion credencial
-    $resultado=mysql_query($conexion,$consulta);//ejecutamos un query con la conexion recibida y la consulta dada al inicio de la funcion
-    if($resultado){//si se ejecuta correctamente la consulta
-        //if se utiliza con un array o solo una cadena de datos
-        if($datos_if=mysqli_fetch_array($resultado)){//si recupera datos de la consulta, guardarlos en la variable datos_if
-            return $datos_if;//retone datos_if
-        }
-        //while se utiliza con muchos arrays o varias cadenas de datos
-        while($datos_while=mysqli_fetch_array($resultado)){//mientras recupera datos de la consulta, guardarlos en la variable datos_while
-            return $datos_while;//retorne datos_while
+require_once("conexion.php");
+class consultas{
+    public function insertar($consulta){
+    $conexion=conexion::credencial();
+    $resultado=mysql_query($conexion,$consulta);
+    if($resultado){
+        if($datos=mysqli_fetch_array($resultado)){
+            return $datos;
         }
     } 
     }
+
+    public function seleccionar($consulta){
+        $conexion=conexion::credencial();
+        $resultado=mysql_query($conexion,$consulta);
+        if($resultado){
+            while($datos=mysqli_fetch_array($resultado)){
+                return $datos;
+            }
+        } 
+    }
+
+    public function actualizar($consulta){
+        $conexion=conexion::credencial();
+        $resultado=mysql_query($conexion,$consulta);
+        if($resultado){
+            if($datos=mysqli_fetch_array($resultado)){
+                return $datos;
+            }
+        } 
+    }
+
+    public function borrar($consulta){
+        $conexion=conexion::credencial();
+        $resultado=mysql_query($conexion,$consulta);
+        if($resultado){
+            if($datos=mysqli_fetch_array($resultado)){
+                return $datos;
+            }
+        } 
+    }
+
+    public function contar($consulta){
+        $conexion=conexion::credencial();
+        $resultado=mysql_query($conexion,$consulta);
+        if($resultado){
+            if($datos=mysqli_fetch_array($resultado)){
+                datos_final=$datos[0]+1;
+                return $datos_final;
+            }
+        } 
+    }
 }
-//este archivo contiene consultas generalizadas donde le enviaremos un string con la consulta y nos devolvera el resultado.
 ?>
