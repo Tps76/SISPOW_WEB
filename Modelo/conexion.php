@@ -7,6 +7,7 @@ public static function credencial(){
         $password="";
         $conex=mysqli_connect($hostname,$username,$password,$database);
         return $conex;
+        //Hola
 }
 }
 ?>
