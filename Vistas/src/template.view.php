@@ -19,7 +19,7 @@
         <?php
         session_start();
         if (isset($_POST["msg"])) {
-            if ($_POST["msg"]=="") {
+            if ($_GET["msg"]=="") {
                 echo "BANNER";
             } else {
                 echo $_POST["msg"];
