@@ -65,7 +65,7 @@ class Controlador{
             header("Location: ../Vistas/index.php?msg=$consultas");
         }
         }
-
+ 
     }
     public function cerrar_sesion(){
         session_start();
