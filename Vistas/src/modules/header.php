@@ -56,11 +56,11 @@
 
             <label for="">Seleccion de tipo de usuario: </label>
             <select class="form-control" name="tipo_usuario" id="">
-                <option selected>escoja usuario</option>
-                <option value="administrador">administrador</option>
-                <option value="empleado">empleado</option>
-                <option value="cliente">cliente</option>
-            </select>
+                <option selected>Escoja Usuario</option>
+                <option value="administrador">Administrador</option>
+                <option value="empleado">Empleado</option>
+                <option value="cliente">Cliente</option>
+            </select><br>
          
             <div class="text-right">
                 <input class="btn btn-success" type="submit" value="Enviar">
