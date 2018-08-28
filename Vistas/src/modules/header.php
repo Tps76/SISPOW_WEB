@@ -41,6 +41,30 @@
             <input type="text" class="form-control" name="name" id="name">
             <label for="last-name">Apellido:</label>
             <input type="text" class="form-control" name="last-name" id="last-name">
+            <div class="form-check-inline">
+                <label for="genere" class="form-check-label">Genero:
+                    <input type="radio" class="form-check-input" name="masculino" id="">Masculino
+                    <input type="radio" class="form-check-input" name="femenino" id="">Femenino
+                </label> 
+            </div>
+            <br> <br>
+            <select name="pais" class="custom-select">
+            <!-- Aquí colocan código php para cargar los paises -->
+                <option selected>Seleccione su país</option>
+                <?php echo '<option value="paisuno">país uno</option>'; ?>
+            </select> <br> <br>
+            <select name="depto" class="custom-select">
+            <!-- Aquí colocan código php para cargar los paises -->
+                <option selected>Seleccione su departamento</option>
+                <?php echo '<option value="depto1">departamento uno</option>'; ?>
+            </select> <br><br>
+            <select name="ciudad" class="custom-select">
+            <!-- Aquí colocan código php para cargar los paises -->
+                <option selected>Seleccione su ciudad</option>
+                <?php echo '<option value="ciudaduno">ciudad uno</option>'; ?>
+            </select>
+            <label for="">Fecha de nacimiento: </label>
+            <input type="date" name="date" class="form-control" max="3000-12-31" min="1000-01-01" />
             <label for="tel">Telefono:</label>
             <input type="text" class="form-control" name="tel" id="tel">
             <label for="cel">Celular:</label>
