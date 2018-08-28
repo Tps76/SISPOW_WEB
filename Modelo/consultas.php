@@ -3,15 +3,17 @@ require_once("conexion.php");
 class consultas{
     public function insertar($consulta){
     $conexion=conexion::credencial();
-    $resultado=mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
+    $resultado=mysqli_query($conexion,$consulta);
     if($resultado){
-            return "insertado";
+        return "insertado";
+    }else{
+        return "no insertado";
     }
     }
 
     public function seleccionar($consulta){
         $conexion=conexion::credencial();
-        $resultado=mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
+        $resultado=mysqli_query($conexion,$consulta);
         if($resultado){
             while($datos=mysqli_fetch_array($resultado)){
                 return $datos;
@@ -21,25 +23,27 @@ class consultas{
 
     public function actualizar($consulta){
         $conexion=conexion::credencial();
-        $resultado=mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
+        $resultado=mysqli_query($conexion,$consulta);
         if($resultado){
             return "actualizado";
+        }else{
+            return "no actualizado";
         }
     }
 
     public function borrar($consulta){
         $conexion=conexion::credencial();
-        $resultado=mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
+        $resultado=mysqli_query($conexion,$consulta);
         if($resultado){
-            if($datos=mysqli_fetch_array($resultado)){
-                return $datos;
-            }
+            return "borrado";
+        }else{
+            return "no borrado";
         } 
     }
 
     public function contar($consulta){
         $conexion=conexion::credencial();
-        $resultado=mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
+        $resultado=mysqli_query($conexion,$consulta);
         if($resultado){
             if($datos=mysqli_fetch_array($resultado)){
                 $datos_final=$datos[0]+1;

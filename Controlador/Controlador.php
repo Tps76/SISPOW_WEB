@@ -36,9 +36,14 @@ class Controlador{
             $tipo_final=3;
         }
         $consulta="INSERT INTO usuario(idusuario,email_usuario,password_usuario,tipo_usuario,estado_usuario) VALUES('$id','$email','$password','$tipo_final',0)";
-        $consultas=consultas::insertar($consulta);
-        $msg="hola";
-        header("Location: ../Vistas/index.php");
+        if($consultas=consultas::insertar($consulta)=="insertado"){
+            $consultas="registrado";
+            header("Location: ../Vistas/index.php?msg=$consultas");
+        }else{
+            $consultas="no registrado";
+            header("Location: ../Vistas/index.php?msg=$consultas");
+        }
+        
     }
     }
 }

@@ -14,12 +14,15 @@
     <!-- ======= BANNER ======= -->
     <aside class="container-fluid banner row d-flex">
         <!-- <img class="img-fluid" src="src/assets/banner11.jpg" alt=""> -->
-        <h1 class="h1 text-center col-md-12">BANNER</h1>
+        <h1 class="h1 text-center col-md-12">
         <?php
-        if (isset($msg)) {
-            echo $msg;
+        if (isset($_GET["msg"])) {
+            echo $_GET["msg"];
+        }else{
+            echo "BANNER";
         }
         ?>
+        </h1>
     </aside>
     <br>
     <!-- ======= HEADER SEARCH BAR ======= -->
