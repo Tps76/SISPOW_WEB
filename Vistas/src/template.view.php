@@ -18,11 +18,11 @@
         <h1 class="h1 text-center col-md-12">
         <?php
         session_start();
-        if (isset($_POST["msg"])) {
+        if (isset($_GET["msg"])) {
             if ($_GET["msg"]=="") {
                 echo "BANNER";
             } else {
-                echo $_POST["msg"];
+                echo $_GET["msg"];
             }
         }else{
             echo "BANNER";
