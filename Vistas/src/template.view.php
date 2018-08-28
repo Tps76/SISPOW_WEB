@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <link rel="stylesheet" href="src/css/style.css">
     <title>SISPOSW - Tienda Online</title>
@@ -16,8 +17,13 @@
         <!-- <img class="img-fluid" src="src/assets/banner11.jpg" alt=""> -->
         <h1 class="h1 text-center col-md-12">
         <?php
+        session_start();
         if (isset($_GET["msg"])) {
-            echo $_GET["msg"];
+            if ($_GET["msg"]=="") {
+                echo "BANNER";
+            } else {
+                echo $_GET["msg"];
+            }
         }else{
             echo "BANNER";
         }
@@ -25,19 +31,20 @@
         </h1>
     </aside>
     <br>
+    
     <!-- ======= HEADER SEARCH BAR ======= -->
     <header class="container-fluid row n">
-        <?php include "src/modules/header.php" ?>
+        <?php include "modules/header.php" ?>
     </header>
     
     <div class="container-fluid row">
         <!-- ======= MAIN MENU ======= -->
         <nav class="col-md-2 d">
-            <?php include "src/modules/categories.php"; ?>
+            <?php include "modules/categories.php"; ?>
         </nav>
         <!-- ======= MAIN CONTNTENT ======= -->
         <main class="col-md-10">
-            <?php include "src/modules/products.php" ?>
+            <?php include "modules/products.php" ?>
         </main>
     </div>
 

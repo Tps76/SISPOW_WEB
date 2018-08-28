@@ -6,18 +6,26 @@
     <input class="search__btn" type="submit" value="Buscar">
 </section>
 <section class="col-md-3">
-    <ul class="session text-right">
-        <li class="session__item"><a class="session__link" data-placement="bottom" role="button" data-toggle="popover" data-title="" data-container="body"  data-html="true" href="#" id="login">Iniciar sesion  /</a></li>
-        <li class="session__item"><a class="session__link" href="#" id="signUp" data-toggle="modal" data-target="#regModal">Registrarse</a></li>
-    </ul>
+    <?php
+        if (isset($_SESSION["nueva"])) {
+            echo '<a href="/SISPOW_WEB/Controlador/Controlador.php?accion=cerrar_sesion" class="btn waves-effect waves-light">Cerrar sesion</a>';
+        }
+        else {
+            echo '<ul class="session text-right">
+            <li class="session__item"><a class="session__link" data-placement="bottom" role="button" data-toggle="popover" data-title="" data-container="body"  data-html="true" href="#" id="login">Iniciar sesion  /</a></li>
+            <li class="session__item"><a class="session__link" href="#" id="signUp" data-toggle="modal" data-target="#regModal">Registrarse</a></li>
+            </ul>';
+        }
+        
+    ?>
     <!-- Cuadro ingresar -->
     <div class="d-none" id="popover-content">
-        <form action="" class="form-group">
+        <form action="../Controlador/Controlador.php?accion=iniciar_sesion" method="post" class="form-group">
             
             <label for="username">Usuario:</label>
-            <input class="form-control" type="text" name="" id="username">
+            <input class="form-control" type="text" name="user" id="username">
             <label for="userpassword">Contraseña</label>
-            <input class="form-control" type="password" name="" id="userpassword">
+            <input class="form-control" type="password" name="pass" id="userpassword">
             <input class="form-control" type="submit" value="Iniciar sesión">
         
         </form>
@@ -41,6 +49,30 @@
             <input type="text" class="form-control" name="name" id="name">
             <label for="last-name">Apellido:</label>
             <input type="text" class="form-control" name="last-name" id="last-name">
+            <div class="form-check-inline">
+                <label for="genere" class="form-check-label">Genero:
+                    <input type="radio" class="form-check-input" name="genero" value="masculino" id="">Masculino
+                    <input type="radio" class="form-check-input" name="genero" value="femenino" id="">Femenino
+                </label> 
+            </div>
+            <br> <br>
+            <select name="pais" class="custom-select">
+            <!-- Aquí colocan código php para cargar los paises -->
+                <option selected>Seleccione su país</option>
+                <?php echo '<option value="paisuno">país uno</option>'; ?>
+            </select> <br> <br>
+            <select name="depto" class="custom-select">
+            <!-- Aquí colocan código php para cargar los paises -->
+                <option selected>Seleccione su departamento</option>
+                <?php echo '<option value="depto1">departamento uno</option>'; ?>
+            </select> <br><br>
+            <select name="ciudad" class="custom-select">
+            <!-- Aquí colocan código php para cargar los paises -->
+                <option selected>Seleccione su ciudad</option>
+                <?php echo '<option value="ciudaduno">ciudad uno</option>'; ?>
+            </select>
+            <label for="">Fecha de nacimiento: </label>
+            <input type="date" name="date" class="form-control" max="3000-12-31" min="1000-01-01" />
             <label for="tel">Telefono:</label>
             <input type="text" class="form-control" name="tel" id="tel">
             <label for="cel">Celular:</label>
