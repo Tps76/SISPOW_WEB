@@ -385,7 +385,7 @@ CREATE TABLE `usuario` (
 --
 
 --
--- Indices de la tabla `aprovacion`
+-- Indices de la tabla `aprobacion`
 --
 ALTER TABLE `aprovacion`
   ADD PRIMARY KEY (`idaprovacion`),
