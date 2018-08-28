@@ -53,14 +53,15 @@ class Controlador{
             $user=$_POST['user'];
             $password=$_POST['pass'];
             //echo $user+" "+$password;
-        $consulta = "SELECT * FROM usuario WHERE user='$user' AND pass='$password'";
-        if (($consultas=consulta::seleccionar($consulta))!=null) {
-            $_SESSION["nueva"]=$consulta;
-            $consultas="sesion iniciada";
+        $consulta = "SELECT * FROM usuario WHERE idusuario='$user' AND password_usuario='$password'";
+        $consultas=consultas::seleccionar($consulta);
+        if ($consultas["idusuario"]!="") {
+            $_SESSION["nueva"]=$consultas;
+            $consultas="Bienvenido ".$consultas["idusuario"];
             
             header("Location: ../Vistas/index.php?msg=$consultas");
         }else{
-            $consultas="sesion no iniciada";
+            $consultas="Datos incorrectos, sesion no iniciada";
             header("Location: ../Vistas/index.php?msg=$consultas");
         }
         }

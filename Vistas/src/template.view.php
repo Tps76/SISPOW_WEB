@@ -19,7 +19,11 @@
         <?php
         session_start();
         if (isset($_GET["msg"])) {
-            echo $_GET["msg"];
+            if ($_GET["msg"]=="") {
+                echo "BANNER";
+            } else {
+                echo $_GET["msg"];
+            }
         }else{
             echo "BANNER";
         }

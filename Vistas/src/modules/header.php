@@ -8,11 +8,9 @@
 <section class="col-md-3">
     <?php
         if (isset($_SESSION["nueva"])) {
-            echo "hola";
             echo '<a href="/SISPOW_WEB/Controlador/Controlador.php?accion=cerrar_sesion" class="btn waves-effect waves-light">Cerrar sesion</a>';
         }
         else {
-            echo "no hola";
             echo '<ul class="session text-right">
             <li class="session__item"><a class="session__link" data-placement="bottom" role="button" data-toggle="popover" data-title="" data-container="body"  data-html="true" href="#" id="login">Iniciar sesion  /</a></li>
             <li class="session__item"><a class="session__link" href="#" id="signUp" data-toggle="modal" data-target="#regModal">Registrarse</a></li>
