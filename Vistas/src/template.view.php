@@ -17,6 +17,7 @@
         <!-- <img class="img-fluid" src="src/assets/banner11.jpg" alt=""> -->
         <h1 class="h1 text-center col-md-12">
         <?php
+        session_start();
         if (isset($_GET["msg"])) {
             echo $_GET["msg"];
         }else{
@@ -29,17 +30,17 @@
     
     <!-- ======= HEADER SEARCH BAR ======= -->
     <header class="container-fluid row n">
-        <?php include "src/modules/header.php" ?>
+        <?php include "modules/header.php" ?>
     </header>
     
     <div class="container-fluid row">
         <!-- ======= MAIN MENU ======= -->
         <nav class="col-md-2 d">
-            <?php include "src/modules/categories.php"; ?>
+            <?php include "modules/categories.php"; ?>
         </nav>
         <!-- ======= MAIN CONTNTENT ======= -->
         <main class="col-md-10">
-            <?php include "src/modules/products.php" ?>
+            <?php include "modules/products.php" ?>
         </main>
     </div>
 

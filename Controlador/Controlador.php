@@ -12,7 +12,7 @@ class Controlador{
 
 
     public function Inicial(){
-        include 'src/template.view.php';
+        include '../vistas/src/template.view.php';
     }
 
 
@@ -45,6 +45,33 @@ class Controlador{
         }
         
     }
+    }
+    //iniciar sesion Manuel Morales
+    public function iniciar_sesion(){
+        session_start();
+        if (isset($_POST["user"]) && isset($_POST["pass"])) {
+            $user=$_POST['user'];
+            $password=$_POST['pass'];
+            //echo $user+" "+$password;
+        $consulta = "SELECT * FROM usuario WHERE user='$user' AND pass='$password'";
+        if (($consultas=consulta::seleccionar($consulta))!=null) {
+            $_SESSION["nueva"]=$consulta;
+            $consultas="sesion iniciada";
+            
+            header("Location: ../Vistas/index.php?msg=$consultas");
+        }else{
+            $consultas="sesion no iniciada";
+            header("Location: ../Vistas/index.php?msg=$consultas");
+        }
+        }
+
+    }
+    public function cerrar_sesion(){
+        session_start();
+        session_unset();
+        session_destroy(); //no se si esta se debe hacer para guardar las configuraciones que haga el cliente
+        $consulta="Sesion cerrada";
+        header("Location: ../Vistas/index.php?msg=$consultas");
     }
 }
 new Controlador();

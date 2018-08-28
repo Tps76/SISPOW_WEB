@@ -6,18 +6,28 @@
     <input class="search__btn" type="submit" value="Buscar">
 </section>
 <section class="col-md-3">
-    <ul class="session text-right">
-        <li class="session__item"><a class="session__link" data-placement="bottom" role="button" data-toggle="popover" data-title="" data-container="body"  data-html="true" href="#" id="login">Iniciar sesion  /</a></li>
-        <li class="session__item"><a class="session__link" href="#" id="signUp" data-toggle="modal" data-target="#regModal">Registrarse</a></li>
-    </ul>
+    <?php
+        if (isset($_SESSION["nueva"])) {
+            echo "hola";
+            echo '<a href="/SISPOW_WEB/Controlador/Controlador.php?accion=cerrar_sesion" class="btn waves-effect waves-light">Cerrar sesion</a>';
+        }
+        else {
+            echo "no hola";
+            echo '<ul class="session text-right">
+            <li class="session__item"><a class="session__link" data-placement="bottom" role="button" data-toggle="popover" data-title="" data-container="body"  data-html="true" href="#" id="login">Iniciar sesion  /</a></li>
+            <li class="session__item"><a class="session__link" href="#" id="signUp" data-toggle="modal" data-target="#regModal">Registrarse</a></li>
+            </ul>';
+        }
+        
+    ?>
     <!-- Cuadro ingresar -->
     <div class="d-none" id="popover-content">
-        <form action="" class="form-group">
+        <form action="../Controlador/Controlador.php?accion=iniciar_sesion" method="post" class="form-group">
             
             <label for="username">Usuario:</label>
-            <input class="form-control" type="text" name="" id="username">
+            <input class="form-control" type="text" name="user" id="username">
             <label for="userpassword">Contraseña</label>
-            <input class="form-control" type="password" name="" id="userpassword">
+            <input class="form-control" type="password" name="pass" id="userpassword">
             <input class="form-control" type="submit" value="Iniciar sesión">
         
         </form>
