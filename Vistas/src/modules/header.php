@@ -43,8 +43,8 @@
             <input type="text" class="form-control" name="last-name" id="last-name">
             <div class="form-check-inline">
                 <label for="genere" class="form-check-label">Genero:
-                    <input type="radio" class="form-check-input" name="masculino" id="">Masculino
-                    <input type="radio" class="form-check-input" name="femenino" id="">Femenino
+                    <input type="radio" class="form-check-input" name="genero" value="masculino" id="">Masculino
+                    <input type="radio" class="form-check-input" name="genero" value="femenino" id="">Femenino
                 </label> 
             </div>
             <br> <br>

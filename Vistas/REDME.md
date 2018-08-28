@@ -1,0 +1,14 @@
+#Campos de formulario
+-nombre = name
+-apellido = last-name
+-genero = genero
+-pais = valores que le den a a partir de la base de datos.
+-departamento = igual que pais
+-ciudad = igual que pais
+-fecha de nacimiento = date
+-telefono = tel
+-celular = cel
+-email = email
+-direccion = dir
+-usuario = user
+-contraseña = pass
