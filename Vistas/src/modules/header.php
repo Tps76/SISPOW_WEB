@@ -62,7 +62,7 @@
                 <option value="cliente">Cliente</option>
             </select><br>
          
-            <div class="text-right">
+            <div class="text-right"> 
                 <input class="btn btn-success" type="submit" value="Enviar">
             </div>
 
