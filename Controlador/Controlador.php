@@ -18,7 +18,7 @@ class Controlador{
 
     public function registrar(){
     if (isset($_POST["id"]) && isset($_POST["name"]) && isset($_POST["last-name"]) && isset($_POST["tel"]) && isset($_POST["cel"]) && isset($_POST["emai"]) && isset($_POST["dir"]) && isset($_POST["user"]) && isset($_POST["pass"]) && isset($_POST["tipo_usuario"])){
-        $id=$_POST['id'];
+        $id=$_POST['id']; 
         $name=$_POST['name'];
         $last_name=$_POST['last-name'];
         $telefono=$_POST['tel'];
