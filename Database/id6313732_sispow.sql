@@ -29,7 +29,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `aprobacion` (
+<<<<<<< HEAD
   `idaprovacion` int(11) NOT NULL,
+=======
+  `idaprobacion` int(11) NOT NULL,
+>>>>>>> Hi
   `fk_trab` int(11) NOT NULL,
   `nombrecampo` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `ValorCampo` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
