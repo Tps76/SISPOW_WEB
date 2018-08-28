@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `aprovacion`
 --
 
-CREATE TABLE `aprovacion` (
+CREATE TABLE `aprobacion` (
   `idaprovacion` int(11) NOT NULL,
   `fk_trab` int(11) NOT NULL,
   `nombrecampo` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
