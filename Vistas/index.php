@@ -1,2 +1,2 @@
-<?php 
-    include_once "src/template.view.php"; 
+<?php
+    require_once "../Controlador/Controlador.php";

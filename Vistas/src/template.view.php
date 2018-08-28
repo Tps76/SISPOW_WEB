@@ -15,6 +15,11 @@
     <aside class="container-fluid banner row d-flex">
         <!-- <img class="img-fluid" src="src/assets/banner11.jpg" alt=""> -->
         <h1 class="h1 text-center col-md-12">BANNER</h1>
+        <?php
+        if (isset($msg)) {
+            echo $msg;
+        }
+        ?>
     </aside>
     <br>
     <!-- ======= HEADER SEARCH BAR ======= -->

@@ -33,7 +33,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="post" class="form-group">
+        <form action="../Controlador/Controlador.php?accion=registrar" method="post" class="form-group">
             
             <label for="id">Identificación:</label>
             <input type="text" class="form-control" name="id" id="id">
@@ -55,13 +55,13 @@
             <input type="text" class="form-control" name="pass" id="pass">
 
             <label for="">Seleccion de tipo de usuario: </label>
-            <select class="form-control" name="" id="">
+            <select class="form-control" name="tipo_usuario" id="">
                 <option selected>escoja usuario</option>
-                <option value="admin">administrador</option>
+                <option value="administrador">administrador</option>
                 <option value="empleado">empleado</option>
                 <option value="cliente">cliente</option>
             </select>
-
+         
             <div class="text-right">
                 <input class="btn btn-success" type="submit" value="Enviar">
             </div>
