@@ -25,6 +25,7 @@
         </h1>
     </aside>
     <br>
+    
     <!-- ======= HEADER SEARCH BAR ======= -->
     <header class="container-fluid row n">
         <?php include "src/modules/header.php" ?>
