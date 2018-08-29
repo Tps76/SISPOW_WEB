@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 16-08-2018 a las 20:33:12
+-- Servidor: localhost
+-- Tiempo de generación: 29-08-2018 a las 18:22:12
 -- Versión del servidor: 10.2.12-MariaDB
 -- Versión de PHP: 7.0.26
 
@@ -25,15 +25,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `aprovacion`
+-- Estructura de tabla para la tabla `aprobacion`
 --
 
 CREATE TABLE `aprobacion` (
-<<<<<<< HEAD
-  `idaprovacion` int(11) NOT NULL,
-=======
   `idaprobacion` int(11) NOT NULL,
->>>>>>> Hi
   `fk_trab` int(11) NOT NULL,
   `nombrecampo` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `ValorCampo` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
@@ -82,6 +78,106 @@ CREATE TABLE `ciudad` (
   `estado_ciudad` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `ciudad`
+--
+
+INSERT INTO `ciudad` (`idciudad`, `iddepartamento`, `nombre_ciudad`, `estado_ciudad`) VALUES
+(1, 1, 'Medellin', 1),
+(2, 1, 'Santa Fe de Antioquia', 1),
+(3, 1, 'Envigado', 1),
+(4, 2, 'Barranquilla', 1),
+(5, 2, 'Soledad', 1),
+(6, 2, 'Puerto Colombia', 1),
+(7, 3, 'Bogota D.C.', 1),
+(8, 3, 'Chapinero', 1),
+(9, 3, 'Santa Fe', 1),
+(10, 8, 'Cartagena', 1),
+(11, 8, 'Magangue', 1),
+(12, 8, 'Turbaco', 1),
+(13, 9, 'Tunja', 1),
+(14, 9, 'Sogamoso', 1),
+(15, 9, 'Duitama', 1),
+(16, 10, 'Manizales', 1),
+(17, 10, 'La Dorada', 1),
+(18, 10, 'Chinchina', 1),
+(19, 11, 'Florencia', 1),
+(20, 11, 'San Vicente del Caguan', 1),
+(21, 11, 'Belen de los Andaquies', 1),
+(22, 13, 'Valledupar', 1),
+(23, 13, 'El Paso', 1),
+(24, 13, 'El Copey', 1),
+(28, 15, 'Soacha', 1),
+(29, 15, 'Zipaquira', 1),
+(30, 15, 'Facatativa', 1),
+(31, 16, 'Quibdo', 1),
+(32, 16, 'Bahia Solano', 1),
+(33, 16, 'Nuqui', 1),
+(34, 17, 'Neiva', 1),
+(35, 17, 'Pitalito', 1),
+(36, 17, 'Garzon', 1),
+(37, 14, 'Cordoba', 1),
+(38, 14, 'Villa Carlos Paz', 1),
+(39, 14, 'Alta Gracia', 1),
+(40, 18, 'Riohacha', 1),
+(41, 18, 'Maicao', 1),
+(42, 18, 'Uribia', 1),
+(43, 20, 'Santa Marta', 1),
+(44, 20, 'Cienaga', 1),
+(45, 20, 'Aracataca', 1),
+(46, 21, 'Villavicencio', 1),
+(47, 21, 'Acacias', 1),
+(48, 21, 'Puerto Gaitan', 1),
+(81, 4, 'Pasto', 1),
+(82, 4, 'tumaco', 1),
+(83, 4, 'Nariño', 1),
+(84, 5, 'Cúcuta', 1),
+(85, 5, 'Bucaramanga', 1),
+(86, 5, 'El Carmen', 1),
+(87, 6, 'Armenia', 1),
+(88, 6, 'Córdoba', 1),
+(89, 6, 'Calarcá', 1),
+(90, 22, 'Pereira', 1),
+(91, 22, 'Dosquebradas', 1),
+(92, 22, 'Quinchía', 1),
+(93, 23, 'Barrancabermeja', 1),
+(94, 23, 'San Gil', 1),
+(95, 23, 'El Socorro', 1),
+(96, 24, 'Sincelejo', 1),
+(97, 24, 'San Marcos', 1),
+(98, 24, 'Tolú', 1),
+(99, 25, 'Ibagué', 1),
+(100, 25, 'Mariquita', 1),
+(101, 25, 'Saldaña', 1),
+(102, 26, 'Cali', 1),
+(103, 26, 'Buga', 1),
+(104, 26, 'Buenaventura', 1),
+(105, 27, 'Arauca', 1),
+(106, 27, 'Tame', 1),
+(107, 27, 'Saravena', 1),
+(108, 28, 'Yopal', 1),
+(109, 28, 'Aguazul', 1),
+(110, 28, 'Villanueva', 1),
+(111, 29, 'Mocoa', 1),
+(112, 29, 'Puerto Asís', 1),
+(113, 29, 'Villagarzón', 1),
+(114, 30, 'San Andres', 1),
+(115, 31, 'Leticia', 1),
+(116, 31, 'Puerto Nariño', 1),
+(117, 31, 'Puerto Santander', 1),
+(118, 32, 'San Felipe', 1),
+(120, 32, 'inírida', 1),
+(121, 32, 'Cacahual', 1),
+(122, 33, 'Miraflores', 1),
+(123, 33, 'Calamar', 1),
+(124, 33, 'El Retorno', 1),
+(125, 34, 'Mitú', 1),
+(126, 34, 'Carurú', 1),
+(127, 34, 'Pacoa', 1),
+(128, 35, 'Puerto Carreño', 1),
+(129, 35, 'Cumarimbo', 1),
+(130, 25, 'Santa Rosalía', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -107,6 +203,46 @@ CREATE TABLE `departamento` (
   `nombre_departamento` varchar(50) NOT NULL,
   `estado_departamento` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `departamento`
+--
+
+INSERT INTO `departamento` (`iddepartamento`, `idpais`, `nombre_departamento`, `estado_departamento`) VALUES
+(1, 1, 'Antioquia', 1),
+(2, 1, 'Atlantico', 1),
+(3, 1, 'Bogota', 1),
+(4, 1, 'Nariño', 1),
+(5, 1, 'Norte de Santander', 1),
+(6, 1, 'Quindio', 1),
+(8, 1, 'Bolivar', 1),
+(9, 1, 'Boyaca', 1),
+(10, 1, 'Caldas', 1),
+(11, 1, 'Caqueta', 1),
+(12, 1, 'Cauca', 1),
+(13, 1, 'Cesar', 1),
+(14, 1, 'Cordoba', 1),
+(15, 1, 'Cundinamarca', 1),
+(16, 1, 'Choco', 1),
+(17, 1, 'Huila', 1),
+(18, 1, 'La Guajira', 1),
+(19, 1, 'Huila', 1),
+(20, 1, 'Magdalena', 1),
+(21, 1, 'Meta', 1),
+(22, 1, 'Risaralda', 1),
+(23, 1, 'Santander', 1),
+(24, 1, 'Sucre ', 1),
+(25, 1, 'Tolima', 1),
+(26, 1, 'Valle del Cauca', 1),
+(27, 1, 'Arauca', 1),
+(28, 1, 'Casanare', 1),
+(29, 1, 'Putumayo', 1),
+(30, 1, 'San Andres', 1),
+(31, 1, 'Amazonas', 1),
+(32, 1, 'Guainia', 1),
+(33, 1, 'Guaviare', 1),
+(34, 1, 'Vaupes', 1),
+(35, 1, 'Vichada', 1);
 
 -- --------------------------------------------------------
 
@@ -155,6 +291,22 @@ CREATE TABLE `factura` (
 -- --------------------------------------------------------
 
 --
+-- Estructura Stand-in para la vista `facturav`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `facturav` (
+`id_fac` int(11)
+,`fk_trabaj` int(11)
+,`fk_caja` int(11)
+,`fk_tipoPago` int(11)
+,`fk_resFac` int(11)
+,`fk_cliente` int(11)
+,`fk_petProducto` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `identidad`
 --
 
@@ -163,6 +315,13 @@ CREATE TABLE `identidad` (
   `tipo_identidad` varchar(50) NOT NULL,
   `numero_identidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `identidad`
+--
+
+INSERT INTO `identidad` (`ididentidad`, `tipo_identidad`, `numero_identidad`) VALUES
+(1, 'cedula', 1223124);
 
 -- --------------------------------------------------------
 
@@ -190,16 +349,6 @@ CREATE TABLE `movimientos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `numero_caja`
---
-
-CREATE TABLE `numero_caja` (
-  `numero` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `pais`
 --
 
@@ -208,6 +357,13 @@ CREATE TABLE `pais` (
   `nombre_pais` varchar(50) NOT NULL,
   `estado_pais` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `pais`
+--
+
+INSERT INTO `pais` (`idpais`, `nombre_pais`, `estado_pais`) VALUES
+(1, 'Colombia', 1);
 
 -- --------------------------------------------------------
 
@@ -264,8 +420,7 @@ CREATE TABLE `persona` (
   `idciudad` int(11) NOT NULL,
   `direccion` varchar(50) DEFAULT NULL,
   `telefono` varchar(10) DEFAULT NULL,
-  `estado_persona` tinyint(1) NOT NULL DEFAULT 1,
-  `email` varchar(40) NOT NULL
+  `estado_persona` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -350,7 +505,7 @@ CREATE TABLE `stock` (
 
 CREATE TABLE `tipo_caja` (
   `codigo` int(11) NOT NULL,
-  `fk_numcaj` int(11) NOT NULL,
+  `numero_caja` int(11) NOT NULL,
   `ubicacion` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` varchar(60) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -385,14 +540,30 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`idusuario`, `email_usuario`, `password_usuario`, `tipo_usuario`, `estado_usuario`) VALUES
+(1, 'mm@gmail.com', 'caca', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `facturav`
+--
+DROP TABLE IF EXISTS `facturav`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`id6313732_oscar`@`%` SQL SECURITY DEFINER VIEW `facturav`  AS  select `f`.`id_fac` AS `id_fac`,`f`.`fk_trabaj` AS `fk_trabaj`,`f`.`fk_caja` AS `fk_caja`,`f`.`fk_tipoPago` AS `fk_tipoPago`,`f`.`fk_resFac` AS `fk_resFac`,`f`.`fk_cliente` AS `fk_cliente`,`f`.`fk_petProducto` AS `fk_petProducto` from `factura` `f` ;
+
+--
 -- Índices para tablas volcadas
 --
 
 --
 -- Indices de la tabla `aprobacion`
 --
-ALTER TABLE `aprovacion`
-  ADD PRIMARY KEY (`idaprovacion`),
+ALTER TABLE `aprobacion`
+  ADD PRIMARY KEY (`idaprobacion`),
   ADD KEY `fk_trab` (`fk_trab`);
 
 --
@@ -478,12 +649,6 @@ ALTER TABLE `movimientos`
   ADD KEY `movimientos_ibfk_1` (`fk_trabajador`);
 
 --
--- Indices de la tabla `numero_caja`
---
-ALTER TABLE `numero_caja`
-  ADD PRIMARY KEY (`numero`);
-
---
 -- Indices de la tabla `pais`
 --
 ALTER TABLE `pais`
@@ -551,8 +716,7 @@ ALTER TABLE `stock`
 -- Indices de la tabla `tipo_caja`
 --
 ALTER TABLE `tipo_caja`
-  ADD PRIMARY KEY (`codigo`),
-  ADD KEY `fk_numcaj` (`fk_numcaj`);
+  ADD PRIMARY KEY (`codigo`);
 
 --
 -- Indices de la tabla `trabajador`
@@ -575,10 +739,10 @@ ALTER TABLE `usuario`
 --
 
 --
--- AUTO_INCREMENT de la tabla `aprovacion`
+-- AUTO_INCREMENT de la tabla `aprobacion`
 --
-ALTER TABLE `aprovacion`
-  MODIFY `idaprovacion` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `aprobacion`
+  MODIFY `idaprobacion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `categoria_producto`
@@ -596,7 +760,7 @@ ALTER TABLE `categoria_usuario`
 -- AUTO_INCREMENT de la tabla `ciudad`
 --
 ALTER TABLE `ciudad`
-  MODIFY `idciudad` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idciudad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
@@ -608,7 +772,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `departamento`
 --
 ALTER TABLE `departamento`
-  MODIFY `iddepartamento` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `iddepartamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
@@ -632,7 +796,7 @@ ALTER TABLE `factura`
 -- AUTO_INCREMENT de la tabla `identidad`
 --
 ALTER TABLE `identidad`
-  MODIFY `ididentidad` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ididentidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `metodo_pago`
@@ -647,16 +811,10 @@ ALTER TABLE `movimientos`
   MODIFY `id_mov` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `numero_caja`
---
-ALTER TABLE `numero_caja`
-  MODIFY `numero` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `pais`
 --
 ALTER TABLE `pais`
-  MODIFY `idpais` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idpais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `pedido_producto`
@@ -710,16 +868,16 @@ ALTER TABLE `trabajador`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `aprovacion`
+-- Filtros para la tabla `aprobacion`
 --
-ALTER TABLE `aprovacion`
+ALTER TABLE `aprobacion`
   ADD CONSTRAINT `fk_trab` FOREIGN KEY (`fk_trab`) REFERENCES `trabajador` (`idtrabajador`);
 
 --
@@ -817,12 +975,6 @@ ALTER TABLE `sede`
 ALTER TABLE `stock`
   ADD CONSTRAINT `fk_producto_stock` FOREIGN KEY (`idproducto`) REFERENCES `producto` (`idproducto`),
   ADD CONSTRAINT `fk_proveedor_stock` FOREIGN KEY (`idproveedor`) REFERENCES `proveedor` (`idproveedor`);
-
---
--- Filtros para la tabla `tipo_caja`
---
-ALTER TABLE `tipo_caja`
-  ADD CONSTRAINT `fk_numcaj` FOREIGN KEY (`fk_numcaj`) REFERENCES `numero_caja` (`numero`);
 
 --
 -- Filtros para la tabla `trabajador`
