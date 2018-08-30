@@ -11,6 +11,14 @@ class consultas{
     }
     }
 
+    public function seleccionar_datos($consulta){
+        $conexion=conexion::credencial();
+        $resultado=mysqli_query($conexion,$consulta);
+        if($resultado){
+            return $resultado;
+        } 
+    }
+
     public function seleccionar($consulta){
         $conexion=conexion::credencial();
         $resultado=mysqli_query($conexion,$consulta);

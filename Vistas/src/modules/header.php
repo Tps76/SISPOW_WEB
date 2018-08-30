@@ -51,25 +51,23 @@
             <input type="text" class="form-control" name="last-name" id="last-name">
             <div class="form-check-inline">
                 <label for="genere" class="form-check-label">Genero:
-                    <input type="radio" class="form-check-input" name="genero" value="masculino" id="">Masculino
-                    <input type="radio" class="form-check-input" name="genero" value="femenino" id="">Femenino
+                    <input type="radio" class="form-check-input" name="genero" value="masculino" id="m">Masculino
+                    <input type="radio" class="form-check-input" name="genero" value="femenino" id="f">Femenino
                 </label> 
             </div>
             <br> <br>
-            <select name="pais" class="custom-select">
+            <select name="pais" class="custom-select" id="pais">
             <!-- Aquí colocan código php para cargar los paises -->
-                <option selected>Seleccione su país</option>
-                <?php echo '<option value="paisuno">país uno</option>'; ?>
-            </select> <br> <br>
-            <select name="depto" class="custom-select">
-            <!-- Aquí colocan código php para cargar los paises -->
-                <option selected>Seleccione su departamento</option>
-                <?php echo '<option value="depto1">departamento uno</option>'; ?>
+            <option selected>Seleccione su país</option>
+            </select>
+            <br> <br>
+            <select id="departamento" name="departamento" class="custom-select">
+            <!-- Aquí colocan código php para cargar los departamentos -->
+            <option selected>Seleccione su departamento</option>
             </select> <br><br>
-            <select name="ciudad" class="custom-select">
-            <!-- Aquí colocan código php para cargar los paises -->
-                <option selected>Seleccione su ciudad</option>
-                <?php echo '<option value="ciudaduno">ciudad uno</option>'; ?>
+            <select id="ciudad" name="ciudad" class="custom-select">
+            <!-- Aquí colocan código php para cargar las ciudades -->
+            <option selected>Seleccione su ciudad</option>
             </select>
             <label for="">Fecha de nacimiento: </label>
             <input type="date" name="date" class="form-control" max="3000-12-31" min="1000-01-01" />
@@ -87,7 +85,7 @@
             <input type="text" class="form-control" name="pass" id="pass">
 
             <label for="">Seleccion de tipo de usuario: </label>
-            <select class="form-control" name="tipo_usuario" id="">
+            <select class="form-control" name="tipo_usuario" id="ad">
                 <option selected>Escoja Usuario</option>
                 <option value="administrador">Administrador</option>
                 <option value="empleado">Empleado</option>
