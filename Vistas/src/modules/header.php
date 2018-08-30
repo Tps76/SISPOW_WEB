@@ -45,14 +45,18 @@
             
             <label for="id">Identificación:</label>
             <input type="text" class="form-control" name="id" id="id">
+            <label for="">Seleccion de tipo de usuario: </label>
+            <select class="form-control" name="tipo_identificacion" id="identificacion">
+            <option value="cedula">Cedula</option>
+            </select>
             <label for="name">Nombres:</label>
             <input type="text" class="form-control" name="name" id="name">
             <label for="last-name">Apellido:</label>
             <input type="text" class="form-control" name="last-name" id="last-name">
             <div class="form-check-inline">
                 <label for="genere" class="form-check-label">Genero:
-                    <input type="radio" class="form-check-input" name="genero" value="masculino" id="m">Masculino
-                    <input type="radio" class="form-check-input" name="genero" value="femenino" id="f">Femenino
+                    <input type="radio" class="form-check-input" name="genero" value="M" id="m">Masculino
+                    <input type="radio" class="form-check-input" name="genero" value="F" id="f">Femenino
                 </label> 
             </div>
             <br> <br>
