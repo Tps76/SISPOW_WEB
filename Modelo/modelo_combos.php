@@ -27,7 +27,7 @@ class modelo_combos{
         echo '<option value="0">Seleccione su '.$requerido.'</option>';
         if($resultado){
             while($datos=mysqli_fetch_array($resultado)){
-                echo '<option value="'.$datos["id".$requerido].'">'.$datos["nombre_".$requerido].'</option>';
+                echo '<option value="'.$datos["id".$requerido].'">'.utf8_encode($datos["nombre_".$requerido]).'</option>';
             }
         }
     }
