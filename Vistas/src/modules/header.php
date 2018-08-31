@@ -86,7 +86,7 @@
             <label for="user">Usuario:</label>
             <input type="text" class="form-control" name="user" id="user">
             <label for="pass">Contraseña:</label>
-            <input type="text" class="form-control" name="pass" id="pass">
+            <input type="text" class="form-control" name="pass" id="pass" onChange="es_vacio()">
 
             <label for="">Seleccion de tipo de usuario: </label>
             <select class="form-control" name="tipo_usuario" id="ad">
@@ -97,7 +97,7 @@
             </select><br>
          
             <div class="text-right">
-                <input class="btn btn-success" type="submit" value="Enviar">
+                <input class="btn btn-success" type="submit" value="Enviar" disabled="disabled" id="boton_enviar_registro">
             </div>
 
         </form>
