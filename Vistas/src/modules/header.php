@@ -61,16 +61,13 @@
             </div>
             <br> <br>
             <select name="pais" class="custom-select" id="pais">
-            <!-- Aquí colocan código php para cargar los paises -->
             <option selected>Seleccione su país</option>
             </select>
             <br> <br>
             <select id="departamento" name="departamento" class="custom-select">
-            <!-- Aquí colocan código php para cargar los departamentos -->
             <option selected>Seleccione su departamento</option>
             </select> <br><br>
             <select id="ciudad" name="ciudad" class="custom-select">
-            <!-- Aquí colocan código php para cargar las ciudades -->
             <option selected>Seleccione su ciudad</option>
             </select>
             <label for="">Fecha de nacimiento: </label>
