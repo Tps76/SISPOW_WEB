@@ -1,73 +1,27 @@
-$('#pass').on('input', function() { //#pass = input campo
-    var pass = $(this).val()
-    if(pass!=""){
-       document.getElementById("boton_enviar_registro").removeAttribute('disabled');
+function validar(){
+    var id = $('#id').val();
+    var dato_id = "identidad";
+    var indice = "Start"
+    $.post( '../Modelo/modelo_validar.php',{ indice: indice ,requerido: id, dato: dato_id} ).done( function(respuesta)
+	{
+        console.log(respuesta);
+		if(respuesta=="true"){
+           $('#id').css("border-color", "red");
+        }else{
+           $('#id').css("border-color", "green");
+        }
+	});
+    var name = $('#name').val();
+    var lastname = $('#last-name').val();
+    var tel = $('#tel').val();
+    var cel = $('#cel').val();
+    var email = $('#email').val();
+    var dir = $('#dir').val();
+    var user = $('#user').val();
+    var pass = $('#pass').val();
+    if (id!="" && name!="" && lastname!="" && tel!="" && cel!="" && email!="" && dir!="" && user!="" && pass!="") {
+        document.getElementById("boton_enviar_registro").removeAttribute('disabled');
     }else{
-       document.getElementById("boton_enviar_registro").setAttribute('disabled' , 'diabled');
+        document.getElementById("boton_enviar_registro").setAttribute('disabled' , 'diabled');
     }
-});
-$('#id').on('input', function() { 
-    var id = $(this).val()
-    if(id!=""){
-       document.getElementById("boton_enviar_registro").removeAttribute('disabled');
-    }else{
-       document.getElementById("boton_enviar_registro").setAttribute('disabled' , 'diabled');
-    }
-});
-$('#name').on('input', function() { 
-    var name = $(this).val()
-    if(name!=""){
-       document.getElementById("boton_enviar_registro").removeAttribute('disabled');
-    }else{
-       document.getElementById("boton_enviar_registro").setAttribute('disabled' , 'diabled');
-    }
-});
-$('#last-name').on('input', function() { 
-    var lastName = $(this).val()
-    if(lastName!=""){
-       document.getElementById("boton_enviar_registro").removeAttribute('disabled');
-    }else{
-       document.getElementById("boton_enviar_registro").setAttribute('disabled' , 'diabled');
-    }
-});
-
-$('#tel').on('input', function() { 
-    var tel = $(this).val()
-    if(tel!=""){
-       document.getElementById("boton_enviar_registro").removeAttribute('disabled');
-    }else{
-       document.getElementById("boton_enviar_registro").setAttribute('disabled' , 'diabled');
-    }
-});
-$('#cel').on('input', function() { 
-    var cel = $(this).val()
-    if(cel!=""){
-       document.getElementById("boton_enviar_registro").removeAttribute('disabled');
-    }else{
-       document.getElementById("boton_enviar_registro").setAttribute('disabled' , 'diabled');
-    }
-});
-$('#email').on('input', function() {
-    var email = $(this).val()
-    if(email!=""){
-       document.getElementById("boton_enviar_registro").removeAttribute('disabled');
-    }else{
-       document.getElementById("boton_enviar_registro").setAttribute('disabled' , 'diabled');
-    }
-});
-$('#dir').on('input', function() { 
-    var dir = $(this).val()
-    if(dir!=""){
-       document.getElementById("boton_enviar_registro").removeAttribute('disabled');
-    }else{
-       document.getElementById("boton_enviar_registro").setAttribute('disabled' , 'diabled');
-    }
-});
-$('#user').on('input', function() { 
-    var user = $(this).val()
-    if(user!=""){
-       document.getElementById("boton_enviar_registro").removeAttribute('disabled');
-    }else{
-       document.getElementById("boton_enviar_registro").setAttribute('disabled' , 'diabled');
-    }
-});
+}

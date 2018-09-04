@@ -1,5 +1,5 @@
 <section class="col-md-2">
-    <p class="align-middle">Logo empresa</p>
+    <p class="align-middle">Log empresa</p>
 </section>
 <section class="col-md-7 input-group">
     <input class="search form-control" type="search" name="search" id="search">
@@ -44,15 +44,15 @@
         <form action="../Controlador/Controlador.php?accion=registrar" method="post" class="form-group">
             
             <label for="id">Identificación:</label>
-            <input type="text" class="form-control" name="id" id="id">
+            <input type="text" class="form-control" name="id" id="id" onkeyup="validar()" onchange="validar()">
             <label for="">Seleccion de tipo de usuario: </label>
             <select class="form-control" name="tipo_identificacion" id="identificacion">
             <option value="cedula">Cedula</option>
             </select>
             <label for="name">Nombres:</label>
-            <input type="text" class="form-control" name="name" id="name">
+            <input type="text" class="form-control" name="name" id="name" onkeyup="validar()" onchange="validar()">
             <label for="last-name">Apellido:</label>
-            <input type="text" class="form-control" name="last-name" id="last-name">
+            <input type="text" class="form-control" name="last-name" id="last-name" onchange="validar()">
             <div class="form-check-inline">
                 <label for="genere" class="form-check-label">Genero:
                     <input type="radio" class="form-check-input" name="genero" value="M" id="m">Masculino
@@ -73,17 +73,17 @@
             <label for="">Fecha de nacimiento: </label>
             <input type="date" name="date" class="form-control" max="3000-12-31" min="1000-01-01" />
             <label for="tel">Telefono:</label>
-            <input type="text" class="form-control" name="tel" id="tel">
+            <input type="text" class="form-control" name="tel" id="tel" onchange="validar()">
             <label for="cel">Celular:</label>
-            <input type="text" class="form-control" name="cel" id="cel">
+            <input type="text" class="form-control" name="cel" id="cel" onchange="validar()">
             <label for="email">Email:</label>
-            <input type="text" class="form-control" name="emai" id="emai">
+            <input type="text" class="form-control" name="emai" id="emai" onchange="validar()">
             <label for="dir">Dirección:</label>
-            <input type="text" class="form-control" name="dir" id="dir">
+            <input type="text" class="form-control" name="dir" id="dir" onchange="validar()">
             <label for="user">Usuario:</label>
-            <input type="text" class="form-control" name="user" id="user">
+            <input type="text" class="form-control" name="user" id="user" onchange="validar()">
             <label for="pass">Contraseña:</label>
-            <input type="text" class="form-control" name="pass" id="pass" onChange="es_vacio()">
+            <input type="text" class="form-control" name="pass" id="pass" onchange="validar()">
 
             <label for="">Seleccion de tipo de usuario: </label>
             <select class="form-control" name="tipo_usuario" id="ad">
