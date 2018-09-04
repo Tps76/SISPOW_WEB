@@ -97,7 +97,7 @@ class Controlador{
         if(isset($_POST["search"])){
             $obj = $_POST["search"];
             $consulta = "select * from producto where nombre_producto like '$obj'";
-            
+            $consultas = consultas::buscar($consulta);
         }
     }
 }
