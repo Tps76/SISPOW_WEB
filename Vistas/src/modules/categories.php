@@ -2,9 +2,17 @@
 <p class="menu__title">Categorias</p>
 <ul class=menu>
     <?php
-        for ($i=0; $i < 4; $i++) { 
-            echo '<li class="menu__item"><a class="menu__link" href="#">categoria '. $i . '</a></li>';
-        }
+    $categorias = array(
+        "Motos",
+        "Carros");
+
+        
+                
+        for ($i=0; $i < 2; $i++) {
+            
+            echo '<li class="menu__item"><a class="menu__link" href="#"> ' . $categorias[$i] . '</a></li>';
+           
+        } 
     ?>
     <li class="">
         <a class="menu__link" href="#">
