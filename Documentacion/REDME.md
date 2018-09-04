@@ -1,2 +1,0 @@
-#Soy Alejandro
-#Soy Santiago
