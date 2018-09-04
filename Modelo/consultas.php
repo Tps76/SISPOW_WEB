@@ -1,6 +1,7 @@
 <?php
 require_once("conexion.php");
 class consultas{
+
     public function insertar($consulta){
     $conexion=conexion::credencial();
     $resultado=mysqli_query($conexion,$consulta);
@@ -61,7 +62,13 @@ class consultas{
     }
 
     public function buscar($consulta){
-        $putosantiago;
+        $conexion=conexion::credencial();
+        $resultado=mysql_query($conexion,$consulta);
+        if($resultado){
+            return $resultado;
+        } else {
+            return "No encontrado";
+        }
     }
 }
 ?>
