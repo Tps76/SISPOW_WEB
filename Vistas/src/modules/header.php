@@ -61,7 +61,8 @@
             </div>
             <br> <br>
             <select name="pais" class="custom-select" id="pais">
-            <option selected>Seleccione su país</option>
+            <option selected>Argentina</option>
+            <option selected>Colombia</option>
             </select>
             <br> <br>
             <select id="departamento" name="departamento" class="custom-select">
