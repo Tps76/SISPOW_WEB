@@ -61,7 +61,9 @@ class consultas{
     }
 
     public function buscar($consulta){
-        $putosantiago;
+        $conexion=conexion::credencial();
+        $resultado=mysql_query($conexion,$consulta);
+        
     }
 }
 ?>

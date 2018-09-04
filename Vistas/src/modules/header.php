@@ -2,7 +2,7 @@
     <p class="align-middle">Log empresa</p>
 </section>
 <section class="col-md-7 input-group">
-    <input class="search form-control" type="search" name="search" id="search">
+    <input class="search form-control" type="search" name="search" id="search" method="POST">
     <input class="search__btn" type="submit" value="Buscar">
 </section>
 <section class="col-md-3">
