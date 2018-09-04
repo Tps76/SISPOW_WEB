@@ -59,5 +59,9 @@ class consultas{
             }
         } 
     }
+
+    public function buscar($consulta){
+        $putosantiago;
+    }
 }
 ?>
