@@ -92,6 +92,14 @@ class Controlador{
         $consulta="Sesion cerrada";
         header("Location: ../Vistas/index.php?msg=$consultas");
     }
+
+    public function busca(){
+        if(isset($_POST["search"])){
+            $obj = $_POST["search"];
+            $consulta = "select * from producto where nombre_producto like '$obj'";
+            
+        }
+    }
 }
 new Controlador();
 ?>
