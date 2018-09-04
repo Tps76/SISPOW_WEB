@@ -18,7 +18,7 @@ function validar(){
     var email = $('#email').val();
     var dir = $('#dir').val();
     var user = $('#user').val();
-    var pass = $('#pass').val();
+    var pass = $('#pass').val(); 
     if (id!="" && name!="" && lastname!="" && tel!="" && cel!="" && email!="" && dir!="" && user!="" && pass!="") {
         document.getElementById("boton_enviar_registro").removeAttribute('disabled');
     }else{
