@@ -2,8 +2,8 @@
     <p class="align-middle">Log empresa</p>
 </section>
 <section class="col-md-7 input-group">
-    <input class="search form-control" type="search" name="search" id="search" method="POST">
-    <input class="search__btn" type="submit" value="Buscar">
+        <input class="search form-control" type="search" name="search" id="search" method="POST">
+        <input class="search__btn" type="submit" value="Buscar">
 </section>
 <section class="col-md-3">
     <?php
@@ -30,7 +30,7 @@
         
         </form>
     </div>
-    <!-- Cuadro de registro Modal -->
+    <!jh-- Cuadro de registro Modal -->
     <div class="modal" id="regModal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
