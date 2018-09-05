@@ -50,9 +50,9 @@
             <option value="cedula">Cedula</option>
             </select>
             <label for="name">Nombres:</label>
-            <input type="text" class="form-control" name="name" id="name" onkeyup="validar()" onchange="validar()">
+            <input type="text" class="form-control" name="name" id="name">
             <label for="last-name">Apellido:</label>
-            <input type="text" class="form-control" name="last-name" id="last-name" onchange="validar()">
+            <input type="text" class="form-control" name="last-name" id="last-name">
             <div class="form-check-inline">
                 <label for="genere" class="form-check-label">Genero:
                     <input type="radio" class="form-check-input" name="genero" value="M" id="m">Masculino
@@ -73,17 +73,17 @@
             <label for="">Fecha de nacimiento: </label>
             <input type="date" name="date" class="form-control" max="3000-12-31" min="1000-01-01" />
             <label for="tel">Telefono:</label>
-            <input type="text" class="form-control" name="tel" id="tel" onchange="validar()">
+            <input type="text" class="form-control" name="tel" id="tel">
             <label for="cel">Celular:</label>
-            <input type="text" class="form-control" name="cel" id="cel" onchange="validar()">
+            <input type="text" class="form-control" name="cel" id="cel">
             <label for="email">Email:</label>
-            <input type="text" class="form-control" name="emai" id="emai" onchange="validar()">
+            <input type="text" class="form-control" name="emai" id="emai" onkeyup="validar()" onchange="validar()">
             <label for="dir">Dirección:</label>
-            <input type="text" class="form-control" name="dir" id="dir" onchange="validar()">
+            <input type="text" class="form-control" name="dir" id="dir">
             <label for="user">Usuario:</label>
-            <input type="text" class="form-control" name="user" id="user" onchange="validar()">
+            <input type="text" class="form-control" name="user" id="user" onkeyup="validar()" onchange="validar()">
             <label for="pass">Contraseña:</label>
-            <input type="text" class="form-control" name="pass" id="pass" onchange="validar()">
+            <input type="text" class="form-control" name="pass" id="pass">
 
             <label for="">Seleccion de tipo de usuario: </label>
             <select class="form-control" name="tipo_usuario" id="ad">
