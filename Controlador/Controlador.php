@@ -1,5 +1,6 @@
 <?php
 require_once '../Modelo/consultas.php';
+require_once '../Modelo/Ruta.php';
 class Controlador{
     public function __construct(){
     $accion= isset($_GET["accion"]) ? $_GET["accion"] : "Inicial";
@@ -98,6 +99,16 @@ class Controlador{
             $obj = $_POST["search"];
             $consulta = "select * from producto where nombre_producto like '$obj'";
             $consultas = consultas::buscar($consulta);
+        }
+    }
+    // Daniela enlaces para la página de admin
+    public function rutaAdminController(){
+        if(isset($_GET['action'])){
+            $enlace = $_GET['action'];
+            $ruta = Ruta::rutaAdmin($enlace);
+            if($ruta != false){
+                include $ruta;
+            }
         }
     }
 }
