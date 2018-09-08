@@ -48,3 +48,39 @@
     border-radius:  0 .2em .2em 0;
     height: 38px;
 }
+/* Estilos de la página del admin */
+.header {
+    min-width: 60vw;
+    margin-right: 0px;
+    height: 80px;
+}
+
+.menu-m {
+    background: hsl(0, 0%, 20%);
+    min-height: 87.3vh;
+}
+
+.menu-m a {
+    color: #FFF;
+}
+
+.pg {
+    padding: 10px 0px 0px 10px;
+}
+
+.tamanio {
+    font-size: 48px;
+}
+
+.search {
+    width: 50%;
+}
+
+.form-tam {
+    max-width: 80%;
+}
+
+.tam {
+    height: 50px;
+    width: 50px;
+}
