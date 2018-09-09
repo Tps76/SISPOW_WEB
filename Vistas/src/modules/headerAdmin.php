@@ -15,7 +15,7 @@
                 </div>
             </span>
             <div class="profile">
-                <img class="img-fluid rounded-circle tam mr-5" src="assets/img.png" alt="">
+                <img class="img-fluid rounded-circle tam mr-5" src="src/assets/img.png" alt="">
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@ class Ruta
             $enlace == "empleados" || $enlace == "addEmpleado" || $enlace == "clientes" || 
             $enlace == "addCliente" || $enlace == "proveedores" || $enlace == "addProveedor") {
 
-            $module = "views/modules/". $enlace .".php";
+            $module = "src/modules/". $enlace .".php";
 
         }else{
             $module = false;

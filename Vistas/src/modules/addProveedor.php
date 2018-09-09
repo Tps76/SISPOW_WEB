@@ -13,6 +13,12 @@
                         </div>
                         <input class="form-control" type="text" placeholder="Indentificación">
                     </div>
+                    <div class="col input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="material-icons">perm_identity</i></span>
+                        </div>
+                        <input class="form-control" type="text" placeholder="Razón Social">
+                    </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col input-group">

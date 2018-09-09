@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="views/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
     <title>Admin</title>
 </head>
 <body>
@@ -19,8 +19,9 @@
         <main class="col-md-10">
             <?php  
                 // Aqui debe de de incluir la página php que se seleccione en el nav.php
-                // $rutas = new Controller();
-                // $rutas->RutaController();
+                // require_once "../Controlador/adminController.php";
+                $rutas = new adminController();
+                $rutas->rutaAdminController();
             ?>
         </main>
     </section>
