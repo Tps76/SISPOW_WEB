@@ -61,14 +61,5 @@ class consultas{
         } 
     }
 
-    public function buscar($consulta){
-        $conexion=conexion::credencial();
-        $resultado=mysqli_query($conexion,$consulta);
-        if($resultado){
-            return $resultado;
-        } else {
-            return "No encontrado";
-        }
-    }
 }
 ?>

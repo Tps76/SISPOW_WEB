@@ -94,13 +94,6 @@ class Controlador{
         header("Location: ../Vistas/index.php?msg=$consultas");
     }
 
-    public function busca(){
-        if(isset($_POST["search"])){
-            $obj = $_POST["search"];
-            $consulta = "select * from producto where nombre_producto like '$obj'";
-            $consultas = consultas::buscar($consulta);
-        }
-    }
     // Daniela enlaces para la página de admin
     public function rutaAdminController(){
         if(isset($_GET['action'])){
