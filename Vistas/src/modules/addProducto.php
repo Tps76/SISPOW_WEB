@@ -1,3 +1,4 @@
+<?php $select = new adminController();  ?>
 <!-- NOTA: hay que añadir los names en los inputs -->
 <div class="container col-8 mt-4 mx-0">
    <div class="card">
@@ -5,7 +6,7 @@
            Añadir Producto
        </div>
        <div class="card-body">
-            <form method="post" >
+            <form method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col input-group">
                         <div class="input-group-prepend">
@@ -47,11 +48,7 @@
                         </div>
                         <select id="m_pago" class="form-control">
                             <option selected>Seleccione Categoría</option>
-                            <option>Visa</option>
-                            <option>MasterCard</option>
-                            <option>PayPal</option>
-                            <option>Davivienda</option>
-                            <option>Colpatria</option>
+                            <?php $select->selectCat(); ?>
                         </select>
                     </div>
                     <div class="col input-group">
@@ -60,11 +57,7 @@
                         </div>
                         <select id="m_pago" class="form-control">
                             <option selected>Seleccione el Proveedor</option>
-                            <option>Visa</option>
-                            <option>MasterCard</option>
-                            <option>PayPal</option>
-                            <option>Davivienda</option>
-                            <option>Colpatria</option>
+                            <?php $select->selectProv(); ?>
                         </select>
                     </div>
                 </div>
