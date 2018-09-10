@@ -2,20 +2,18 @@
 
 class Producto
 {
-    public function getProd()
+    public function getAllProd()
     {
-        $con = Connection::getInstance();
-        $db = $con->getBD();
-        $consulta = "SELECT * FROM productos";
-        $stmt = $db->prepare($consulta);
-        if ($stmt->execute()) {
-            return $stmt->fetchAll();
+        $consulta = "SELECT * FROM producto";
+        $consultas = consultas::seleccionar_datos($consulta);
+        if ($consultas) {
+            return array($consultas->fetch_assoc());
         }else{
             return "error";
         }
-        $stmt->close();
+        $consultas->close();
     }
-    public function regProd($datos)
+    public function insertProd($datos)
     {
         // code...
     }
